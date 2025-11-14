@@ -5,7 +5,7 @@ void main() {
   String exp = 'This is string with single quotes';
   String exp2 = "This is string with double quotes";
   // In dart \ is an escape caracter in case of syntax confusion
-  String name = 'I\'am ,Michael';
+  String name = 'I\'am Googles NanoBannana';
   print(exp);
   print(exp2);
   print(name);
