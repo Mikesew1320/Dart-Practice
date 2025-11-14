@@ -1,1 +1,0 @@
-, asx:"Damat", cxz:"Uskudar"
