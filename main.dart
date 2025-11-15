@@ -184,51 +184,118 @@ void main() {
       }
       print("$i $j");
     }
+
+    dream_func();
+    some_func(22, "Michael");
+    erruda_os(28, 23.567);
+    //some_func();
+    city_names("Jimma", "Addis Abeba");
+    franklin("Masor", asx: "Damat", cxz: "Uskudar");
+    carPlates(145263, fgh: 785458);
   }
-  dream_func();
-  some_func(22, "Michael");
-  erruda_os(28, 23.567);
-  //some_func();
-  city_names("Jimma", "Addis Abeba");
-  franklin("Masor", asx: "Damat", cxz: "Uskudar");
-  carPlates(145263, fgh: 785458);
+  // Exception Handling
+
+  double exept = 12 / 0;
+  print(exept);
+
+  // Creating Exeption with divition by 0
+
+  /*int frozen = 12 ~/ 0;
+      print(frozen);*/
+
+  // Handling the above exeption
+  try {
+    int frozen = 12 ~/ 0;
+    print(frozen);
+  } on IntegerDivisionByZeroException {
+    print("Can not divide by zero");
+  }
+  // Catch Block
+  try {
+    int secto = 34 ~/ 0;
+    print(secto);
+  } catch (e) {
+    print("The exception thrown is handled by $e");
+  }
+
+  // Exception with stack trace
+
+  try {
+    int dexopt = 52 ~/ 0;
+    print(dexopt);
+  } catch (e, s) {
+    print("The exception thrown this time is handled by $e");
+    print("The stack trace is $s");
+  }
+
+  // Finally clause
+
+  try {
+    int dexty = 60 ~/ 12;
+    print(dexty);
+  } catch (e, s) {
+    print("The exception thrown is handled by $e");
+    print("The stack trace is $s");
+  } finally {
+    print("This is finally clause and it will excute always");
+  }
+
+  try {
+    checkNumber(-30);
+  } catch (e) {
+    var msg = checkNegativeException();
+    print(msg.errMsg());
+  }
 }
 
-//Functions
-String dream_func() {
-  //print("Being an Android Developer");
-  return "Function Called";
+// Custom exception handling class
+
+void checkNumber(int numberw) {
+  if (numberw < 0) {
+    throw checkNegativeException();
+  }
 }
 
-//Functions with Parameter
-
-some_func(int xg, String name) {
-  print(xg);
-  print(name);
+class checkNegativeException implements Exception {
+  String errMsg() {
+    return "The value can\'t be negative number";
+  }
 }
+  //Functions
+  String dream_func() {
+    //print("Being an Android Developer");
+    return "Function Called";
+  }
 
-// Arrow or lambda Functions
-erruda_os(int rex, double vcx) => print("$rex, $vcx");
+  //Functions with Parameter
 
-// Optional Positional Parameter
-city_names(String city1, String city2, [String? city3]) {
-  print("The name of city 1 is $city1");
-  print("The name of city 2 is $city2");
-  print("The name of city 3 is $city3");
-}
+  some_func(int xg, String name) {
+    print(xg);
+    print(name);
+  }
 
-// Optional Named Parameter
+  // Arrow or lambda Functions
+  erruda_os(int rex, double vcx) => print("$rex, $vcx");
 
-franklin(String adb, {String? asx, String? cxz}) {
-  print("The root name is $adb");
-  print("The home name is $asx");
-  print("The binary name is $cxz");
-}
+  // Optional Positional Parameter
+  city_names(String city1, String city2, [String? city3]) {
+    print("The name of city 1 is $city1");
+    print("The name of city 2 is $city2");
+    print("The name of city 3 is $city3");
+  }
 
-// Optional Default Parameter
+  // Optional Named Parameter
 
-carPlates(int asd, {int? fgh = 145275, int? dlk = 143585}) {
-  print("The first car plate number is $asd");
-  print("The second car plate number is $fgh");
-  print("The third car plate number is $dlk");
-}
+  franklin(String adb, {String? asx, String? cxz}) {
+    print("The root name is $adb");
+    print("The home name is $asx");
+    print("The binary name is $cxz");
+  }
+
+  // Optional Default Parameter
+
+  carPlates(int asd, {int? fgh = 145275, int? dlk = 143585}) {
+    print("The first car plate number is $asd");
+    print("The second car plate number is $fgh");
+    print("The third car plate number is $dlk");
+  }
