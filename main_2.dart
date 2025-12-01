@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main_2() {
   print("Hello World!");
 
@@ -85,10 +83,10 @@ void main_2() {
   print(xer);
 
   // Null checking expression
-  var xc = 56;
+  /*var xc = 56;
   var cx = null;
   var vcz = xc ?? cx;
-  print(vcz);
+  print(vcz);*/
 
   // switch statement
 
@@ -204,12 +202,12 @@ void main_2() {
       print(frozen);*/
 
   // Handling the above exeption
-  try {
+  /* try {
     int frozen = 12 ~/ 0;
     print(frozen);
   } on IntegerDivisionByZeroException {
     print("Can not divide by zero");
-  }
+  }*/
   // Catch Block
   try {
     int secto = 34 ~/ 0;
