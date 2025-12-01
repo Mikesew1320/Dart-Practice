@@ -1,5 +1,3 @@
-import 'dart:ffi';
-
 void main() {
   print("Hello World!");
 
@@ -85,10 +83,10 @@ void main() {
   print(xer);
 
   // Null checking expression
-  var xc = 56;
+  /*var xc = 56;
   var cx = null;
   var vcz = xc ?? cx;
-  print(vcz);
+  print(vcz);*/
 
   // switch statement
 
@@ -204,7 +202,7 @@ void main() {
       print(frozen);*/
 
   // Handling the above exeption
-  try {
+ /* try {
     int frozen = 12 ~/ 0;
     print(frozen);
   } on IntegerDivisionByZeroException {
@@ -216,7 +214,7 @@ void main() {
     print(secto);
   } catch (e) {
     print("The exception thrown is handled by $e");
-  }
+  }*/
 
   // Exception with stack trace
 
