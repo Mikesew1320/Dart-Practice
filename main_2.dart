@@ -1,5 +1,16 @@
-void main_2() {
+void main() {
   print("Hello World!");
+  // Default Setter
+  var emp = Employee();
+  emp.name = "Bazen Wondu";
+  emp.age = 45;
+  // Default Getter
+  print(emp.name);
+  print(emp.age);
+  // Custom Setter
+  emp.salary = 23000;
+  // Custom Getter
+  print(emp.salary);
 
   // Different ways of declaring String Literals
   String exp = 'This is string with single quotes';
@@ -245,10 +256,12 @@ void main_2() {
     print(msg.errMsg());
   }
 
-  var std1 = Student();
+  var std1 = Student(1675, "Ali");
+  var std3 = Student.customConstructorName();
+  var std4 = Student.anotherCustomConstructor();
 
-  std1.id = 3453;
-  std1.name = "Ephrem";
+  /*std1.id = 3453;
+  std1.name = "Ephrem";*/
 
   print("The ID of the Student is ${std1.id}");
   print("The Name of the Student is ${std1.name}");
@@ -257,10 +270,10 @@ void main_2() {
   std1.eat();
   std1.sleep();
 
-  var std2 = Student();
+  var std2 = Student(6565, "Mike");
 
-  std2.id = 5674;
-  std2.name = "Firaol";
+  /*std2.id = 5674;
+  std2.name = "Firaol";*/
 
   print("The ID of the student is ${std2.id}");
   print("The Name of the Student is ${std2.name}");
@@ -323,10 +336,48 @@ carPlates(int asd, {int? fgh = 145275, int? dlk = 143585}) {
   print("The third car plate number is $dlk");
 }
 
+class Employee {
+  var name;
+  var age;
+  var salary;
+
+  // Custom Setter
+
+  set sal(int sall) {
+    this.salary = sall;
+  }
+
+  // Custom Getter
+
+  int get sal {
+    return salary;
+  }
+}
+
 // Object oriented Programing in Dart refer above at line #250
 class Student {
   var id;
   var name;
+
+  // Defult Constructor
+  /*Student() {
+    print("This is default constructor");
+  }*/
+
+  // Parametrized Constructor
+  Student(var id, var name) {
+    this.id = id;
+    this.name = name;
+  }
+
+  // Custom Constructor
+  Student.customConstructorName() {
+    print("I am custom Constructor!");
+  }
+
+  Student.anotherCustomConstructor() {
+    print("I am another Custom Constructor");
+  }
 
   void study() {
     print("${this.name} is studying now");

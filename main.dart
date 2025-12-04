@@ -202,7 +202,7 @@ void main() {
       print(frozen);*/
 
   // Handling the above exeption
- /* try {
+  /* try {
     int frozen = 12 ~/ 0;
     print(frozen);
   } on IntegerDivisionByZeroException {
@@ -259,43 +259,43 @@ class checkNegativeException implements Exception {
     return "The value can\'t be negative number";
   }
 }
-  //Functions
-  String dream_func() {
+//Functions
+/*String dream_func() {
     //print("Being an Android Developer");
     return "Function Called";
-  }
+  }*/
 
-  //Functions with Parameter
+//Functions with Parameter
 
-  some_func(int xg, String name) {
-    print(xg);
-    print(name);
-  }
+some_func(int xg, String name) {
+  print(xg);
+  print(name);
+}
 
-  // Arrow or lambda Functions
-  erruda_os(int rex, double vcx) => print("$rex, $vcx");
+// Arrow or lambda Functions
+erruda_os(int rex, double vcx) => print("$rex, $vcx");
 
-  // Optional Positional Parameter
-  city_names(String city1, String city2, [String? city3]) {
-    print("The name of city 1 is $city1");
-    print("The name of city 2 is $city2");
-    print("The name of city 3 is $city3");
-  }
+// Optional Positional Parameter
+city_names(String city1, String city2, [String? city3]) {
+  print("The name of city 1 is $city1");
+  print("The name of city 2 is $city2");
+  print("The name of city 3 is $city3");
+}
 
-  // Optional Named Parameter
+// Optional Named Parameter
 
-  franklin(String adb, {String? asx, String? cxz}) {
-    print("The root name is $adb");
-    print("The home name is $asx");
-    print("The binary name is $cxz");
-  }
+franklin(String adb, {String? asx, String? cxz}) {
+  print("The root name is $adb");
+  print("The home name is $asx");
+  print("The binary name is $cxz");
+}
 
-  // Optional Default Parameter
+// Optional Default Parameter
 
-  carPlates(int asd, {int? fgh = 145275, int? dlk = 143585}) {
-    print("The first car plate number is $asd");
-    print("The second car plate number is $fgh");
-    print("The third car plate number is $dlk");
-  }
+carPlates(int asd, {int? fgh = 145275, int? dlk = 143585}) {
+  print("The first car plate number is $asd");
+  print("The second car plate number is $fgh");
+  print("The third car plate number is $dlk");
+}
 
   // From Termux Android 
